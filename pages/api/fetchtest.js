@@ -25,6 +25,10 @@ const getCommerceLayerAccessToken = async () => {
   try {
     console.log("Fetching Access Token...");
     console.log(`Executing Function => getCommerceLayerAccessToken`);
+    console.log("clientId: " + process.env.CL_CLIENT_ID);
+    console.log("clientSecret: " + process.env.CL_CLIENT_SECRET);
+    console.log("endpoint: " + process.env.CL_BASE_ENDPOINT);
+
     const { accessToken } = await commercelayerjsAuth.getIntegrationToken({
       clientId: process.env.CL_CLIENT_ID,
       clientSecret: process.env.CL_CLIENT_SECRET,
